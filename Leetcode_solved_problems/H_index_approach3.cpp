@@ -13,6 +13,7 @@ public:
             minHeap.push(c);
             if (minHeap.size() > c)
                 minHeap.pop();
+                
         }
 
         return minHeap.size();
