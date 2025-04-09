@@ -1,5 +1,3 @@
-
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -19,8 +17,8 @@ void reverseInGroups(vector<int> &arr, int k)
 
 int main()
 {
-    vector<int> arr = {1, 2, 3, 4, 5, 6, 7, 8}; // Input array
-    int k = 3;                                  // Size of sub-arrays to be reversed
+    vector<int> arr = {1, 2, 3, 4, 5, 6, 7, 8};
+    int k = 3;
 
     reverseInGroups(arr, k);
 
