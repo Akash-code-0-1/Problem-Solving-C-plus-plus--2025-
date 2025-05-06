@@ -63,6 +63,6 @@ void solve(vector<int> &nums)
 
 int main()
 {
-    vector<int> nums = {3, 5, 4, 1, 9};
+    vector<int> nums = {3, 54, 45, 23, 12, 333, 4, 1, 9};
     solve(nums);
 }

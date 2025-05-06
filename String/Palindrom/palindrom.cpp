@@ -13,7 +13,7 @@ bool isPslaindrome(string s)
     for (int i = 0; i < s.length(); i++)
     {
         if (isalnum(s[i]))
-        { 
+        {
             new_str += s[i];
         }
     }

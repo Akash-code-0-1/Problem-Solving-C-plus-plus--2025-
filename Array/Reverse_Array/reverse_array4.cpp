@@ -16,7 +16,9 @@ void solve(vector<int> &nums, int left, int right)
 int main()
 {
     vector<int> nums = {3, 5, 4, 1, 9};
+
     solve(nums, 0, nums.size() - 1);
+
     for (int i = 0; i < nums.size(); i++)
     {
         cout << nums[i] << " ";
