@@ -1,0 +1,71 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+void prefixSum(int arr[3][3], int n);
+void print(int arr[3][3], int n);
+int main()
+{
+    int n = 3;
+    int arr[3][3] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}};
+    prefixSum(arr, n);
+
+    cout << "Final Prefix sum Array:\n";
+    print(arr, n);
+}
+void prefixSum(int arr[3][3], int n)
+{
+    // vertical prefixsum
+    for (int j = 0; j < n; j++)
+    {
+        for (int i = 1; i < n; i++)
+        {
+            arr[i][j] += arr[i - 1][j];
+        }
+    }
+
+    cout << "Vertical Prefix Sum:\n";
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            cout << setw(3) << left << arr[i][j] << " ";
+        }
+        cout << '\n';
+    }
+
+    // horizontal prefixsum
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 1; j < n; j++)
+        {
+            arr[i][j] += arr[i][j - 1];
+        }
+    }
+
+    cout << "Horizontal Prefix Sum:\n";
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            cout << setw(3) << left << arr[i][j] << " ";
+        }
+        cout << '\n';
+    }
+}
+
+void print(int arr[3][3], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            cout << setw(3) << left << arr[i][j] << " ";
+        }
+        cout << '\n';
+    }
+}
