@@ -7,9 +7,9 @@ int main()
 {
     int n = 3;
     int arr[3][3] = {
-        {1, 2, 3},
-        {4, 5, 6},
-        {7, 8, 9}};
+        {10, 20, 30},
+        {5, 10, 20},
+        {2, 4, 6}};
     prefixSum(arr, n);
 
     cout << "Final Prefix sum Array:\n";
@@ -17,26 +17,6 @@ int main()
 }
 void prefixSum(int arr[3][3], int n)
 {
-    // vertical prefixsum
-    for (int j = 0; j < n; j++)
-    {
-        for (int i = 1; i < n; i++)
-        {
-            arr[i][j] += arr[i - 1][j];
-        }
-    }
-
-    cout << "Vertical Prefix Sum:\n";
-
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            cout << setw(3) << left << arr[i][j] << " ";
-        }
-        cout << '\n';
-    }
-
     // horizontal prefixsum
     for (int i = 0; i < n; i++)
     {
@@ -47,6 +27,26 @@ void prefixSum(int arr[3][3], int n)
     }
 
     cout << "Horizontal Prefix Sum:\n";
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            cout << setw(3) << left << arr[i][j] << " ";
+        }
+        cout << '\n';
+    }
+
+    // vertical prefixsum
+    for (int j = 0; j < n; j++)
+    {
+        for (int i = 1; i < n; i++)
+        {
+            arr[i][j] += arr[i - 1][j];
+        }
+    }
+
+    cout << "Vertical Prefix Sum:\n";
 
     for (int i = 0; i < n; i++)
     {
