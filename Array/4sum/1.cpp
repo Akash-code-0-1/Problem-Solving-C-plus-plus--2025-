@@ -23,8 +23,6 @@ vector<vector<int>> fourSum(vector<int> &nums, int target)
             }
         }
     }
-    
-
     for (const auto &quad : uniqueQuadruplets)
     {
         result.push_back(quad);
