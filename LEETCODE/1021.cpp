@@ -27,7 +27,11 @@ void test(const string& input, const string& expected) {
     } else {
         cout << "FAIL: Input: \"" << input << "\" Output: \"" << output << "\" Expected: \"" << expected << "\"\n";
     }
+
+
 }
+
+
 
 int main() {
     test("(()())(())", "()()()");
