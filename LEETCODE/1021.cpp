@@ -13,14 +13,14 @@ public:
             if (c == '(')
             {
                 if (opened > 0)
-                    result += c; // not outermost '('
+                    result += c; 
                 opened++;
             }
             else
             { // c == ')'
                 opened--;
                 if (opened > 0)
-                    result += c; // not outermost ')'
+                    result += c; 
             }
         }
         return result;
