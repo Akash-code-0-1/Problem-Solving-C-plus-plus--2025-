@@ -124,6 +124,10 @@
     "typeindex": "cpp",
     "typeinfo": "cpp",
     "valarray": "cpp",
-    "format": "cpp"
+    "format": "cpp",
+    "string_view": "cpp",
+    "ranges": "cpp",
+    "span": "cpp",
+    "stacktrace": "cpp"
   }
 }
