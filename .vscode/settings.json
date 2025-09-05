@@ -128,6 +128,9 @@
     "string_view": "cpp",
     "ranges": "cpp",
     "span": "cpp",
-    "stacktrace": "cpp"
+    "stacktrace": "cpp",
+    "barrier": "cpp",
+    "latch": "cpp",
+    "semaphore": "cpp"
   }
 }
