@@ -1,1 +1,2 @@
-        // reverse(rev)
+if (n <= 0)
+        //     return false;

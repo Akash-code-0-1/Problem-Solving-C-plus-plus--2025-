@@ -12,7 +12,6 @@ public:
 int main() {
     Solution sol;
 
-    // Sample inputs
     vector<int> nums = {1, 2, 3, 4, 5, 8, 16, 18};
 
     for (int n : nums) {
