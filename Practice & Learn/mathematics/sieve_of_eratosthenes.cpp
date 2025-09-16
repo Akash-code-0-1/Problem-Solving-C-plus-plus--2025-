@@ -30,7 +30,7 @@ vector<int> sieve(int n)
 
 int main()
 {
-    int n = 30;
+    int n = 10;
     auto primes = sieve(n);
     for (int p : primes)
         cout << p << " ";
