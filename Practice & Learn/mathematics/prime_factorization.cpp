@@ -31,7 +31,7 @@ vector<int> factorize(int n) {
 }
 
 int main() {
-    int n = 84;
+    int n = 6;
     vector<int> f = factorize(n);
     cout << "Prime factors of " << n << ": ";
     for (int x : f) cout << x << " ";
