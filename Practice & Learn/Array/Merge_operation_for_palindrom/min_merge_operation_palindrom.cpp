@@ -27,9 +27,13 @@ int min_merge_operationto_Palndrom(vector<int> &nums)
     return res;
 }
 
+
+
 int main()
 {
     vector<int> nums = {1, 4, 5, 9, 1};
     int result = min_merge_operationto_Palndrom(nums);
     cout << result << endl;
 }
+
+
