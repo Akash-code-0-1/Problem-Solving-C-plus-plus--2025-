@@ -10,7 +10,7 @@ public:
             freq[nums[right]]++;
             if (freq[nums[right]] == 1) k--;  
             
-            while (k < 0) {
+            while (k < 0) {21`
                 freq[nums[left]]--;
                 if (freq[nums[left]] == 0) k++; 
                 left++;
