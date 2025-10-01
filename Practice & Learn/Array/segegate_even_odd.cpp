@@ -13,5 +13,5 @@ void segregateEvenOdd(vector<int>& arr) {
 int main() {
     vector<int> arr = {12, 34, 45, 9, 8, 90, 3};
     segregateEvenOdd(arr);
-    for (int x : arr) cout << x << " "; // 12 34 90 8 45 9 3
+    for (int x : arr) cout << x << " "; // 12 34 90 8 9 45 3
 }
