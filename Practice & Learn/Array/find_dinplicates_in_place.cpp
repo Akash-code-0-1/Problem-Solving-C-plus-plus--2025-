@@ -17,5 +17,5 @@ int main()
 
     for (int dup : res)
         cout << dup << " ";
-    cout<<endl;
+    cout << endl;
 }
