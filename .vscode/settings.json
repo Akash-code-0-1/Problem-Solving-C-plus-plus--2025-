@@ -131,6 +131,21 @@
     "stacktrace": "cpp",
     "barrier": "cpp",
     "latch": "cpp",
-    "semaphore": "cpp"
+    "semaphore": "cpp",
+    "any": "cpp",
+    "bit": "cpp",
+    "charconv": "cpp",
+    "compare": "cpp",
+    "concepts": "cpp",
+    "coroutine": "cpp",
+    "expected": "cpp",
+    "optional": "cpp",
+    "source_location": "cpp",
+    "numbers": "cpp",
+    "spanstream": "cpp",
+    "stdfloat": "cpp",
+    "stop_token": "cpp",
+    "syncstream": "cpp",
+    "variant": "cpp"
   }
 }
