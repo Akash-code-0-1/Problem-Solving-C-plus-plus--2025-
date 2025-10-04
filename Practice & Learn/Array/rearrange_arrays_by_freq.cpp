@@ -12,6 +12,8 @@ int main()
         freq[x]++;
     }
 
+    
+
     // convert to vector pairs
     vector<pair<int, int>> freqVec(freq.begin(), freq.end());
 
@@ -21,6 +23,8 @@ int main()
         if(a.second==b.second) return a.first<b.first;
         return a.second>b.second; });
         
+
+
 
     // printing vector
     for (auto [num, count] : freqVec)
