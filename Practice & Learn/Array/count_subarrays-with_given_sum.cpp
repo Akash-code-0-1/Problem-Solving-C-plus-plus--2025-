@@ -12,10 +12,14 @@ int subarraySum(vector<int> &nums, int k)
     {
         // maintaing running sum
         sum += num;
+        // Check sum-k is in map or not
+        //in first iteration sum-k= 1-3 = -2 → not in map.
         if (prefixCount.find(sum - k) != prefixCount.end())
         {
             count += prefixCount[sum - k];
         }
+        //if not in prefix count update the it
+        //in first iteration // Update prefixCount = {0:1, 1:1}.
         prefixCount[sum]++;
     }
 
