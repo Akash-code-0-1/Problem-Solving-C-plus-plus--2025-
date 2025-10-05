@@ -27,8 +27,6 @@ public:
         for(int i=0;i<k;i++){
             res.push_back(freqVec[i].first);
         }
-
-
         return res;
     }
 };
