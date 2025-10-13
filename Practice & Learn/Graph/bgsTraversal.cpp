@@ -1,31 +1,33 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void bfs(int start, vector<vector<int>> &graph, int n){
-    vector<bool> visited(n,false);
-    queue<int>q;
+void bfs(int start, vector<vector<int>> &graph, int n)
+{
+    vector<bool> visited(n, false);
+    queue<int> q;
 
-    visited[start]=true;
+    visited[start] = true;
     q.push(start);
-    
-    cout<<"BFS Traversal: ";
 
-    while(!q.empty()){
-        int node= q.front();
+    cout << "BFS Traversal: ";
+
+    while (!q.empty())
+    {
+        int node = q.front();
         q.pop();
 
-        cout<< node<<" ";
+        cout << node << " ";
 
-        for(int neighbor: graph[node]){
-            if(!visited[neighbor]){
-                visited[neighbor]=true;
+        for (int neighbor : graph[node])
+        {
+            if (!visited[neighbor])
+            {
+                visited[neighbor] = true;
                 q.push(neighbor);
             }
         }
-
     }
-    cout<<endl;
-
+    cout << endl;
 }
 
 int main()
