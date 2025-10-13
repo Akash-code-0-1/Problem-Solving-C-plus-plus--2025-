@@ -1,50 +1,36 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Solution
-{
+class Solution {
 public:
-    vector<vector<int>> floodFill(vector<vector<int>> &image, int sr, int sc, int color)
-    {
-        vector<vector<int>> matrix = image;
-        int rows = matrix.size();
-        int cols = matrix[0].size();
+    vector<vector<int>> floodFill(vector<vector<int>> &grid, int sr, int sc, int color) {
+        int n = grid.size(), m = grid[0].size();
+        vector<vector<bool>> visited(n, vector<bool>(m, false));
+        queue<pair<int, int>> q;
 
-        // Add 0 to the beginning and end of each row (new columns)
-        for (int i = 0; i < rows; i++)
-        {
-            matrix[i].insert(matrix[i].begin(), 0); 
-            matrix[i].push_back(0);                
-        }
+        int originalColor = grid[sr][sc];
+        if (originalColor == color) return grid; 
 
-        // Create a new row full of 0s (with new column count)
-        vector<int> zeroRow(cols + 2, 0);
+        q.push({sr, sc});
+        visited[sr][sc] = true;
 
-        // Step 3: Add top and bottom zero rows
-        matrix.insert(matrix.begin(), zeroRow);
-        matrix.push_back(zeroRow);
+        vector<vector<int>> res = grid;
+        int dx[] = {1, -1, 0, 0};
+        int dy[] = {0, 0, 1, -1};
 
-        // Prepare result matrix with same size as image
-        vector<vector<int>> res = image;
+        while (!q.empty()) {
+            auto [x, y] = q.front();
+            q.pop();
 
-        int match = image[sr][sc];
+            // Change color
+            res[x][y] = color;
 
-        for (int i = 1; i <= rows; i++)
-        {
-            for (int j = 1; j <= cols; j++)
-            {
-                // Check if the current pixel or any 4-neighbor matches the target
-                if (matrix[i][j] == match &&
-                    (matrix[i - 1][j] == match ||
-                     matrix[i + 1][j] == match ||
-                     matrix[i][j - 1] == match ||
-                     matrix[i][j + 1] == match))
-                {
-                    res[i - 1][j - 1] = color; // map back to original (unpadded) position
-                }
-                else
-                {
-                    res[i - 1][j - 1] = matrix[i][j]; // keep original value
+            for (int i = 0; i < 4; i++) {
+                int nx = x + dx[i], ny = y + dy[i];
+                if (nx >= 0 && ny >= 0 && nx < n && ny < m &&
+                    !visited[nx][ny] && grid[nx][ny] == originalColor) {
+                    visited[nx][ny] = true;
+                    q.push({nx, ny});
                 }
             }
         }
@@ -53,8 +39,7 @@ public:
     }
 };
 
-int main()
-{
+int main() {
     Solution solution;
 
     vector<vector<int>> image = {
@@ -65,13 +50,9 @@ int main()
 
     vector<vector<int>> result = solution.floodFill(image, sr, sc, color);
 
-    cout << "Resultant Image:" << endl;
-    for (const auto &row : result)
-    {
-        for (int pixel : row)
-        {
-            cout << pixel << " ";
-        }
+    cout << "Resultant Image:\n";
+    for (const auto &row : result) {
+        for (int pixel : row) cout << pixel << " ";
         cout << endl;
     }
 
