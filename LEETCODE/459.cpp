@@ -13,19 +13,16 @@ public:
 int main() {
     Solution sol;
     vector<string> samples = {
-        "abab",        // true: "ab"
-        "aba",         // false
-        "abcabcabc",   // true: "abc"
-        "bb",          // true: "b"
-        "babbabbab"    // true: "babbab"
+        "abab",
+        "aba",
+        "abcabcabc",
+        "bb",
+        "babbabbab"
     };
 
     for (const auto &s : samples) {
         cout << s << " -> " << (sol.repeatedSubstringPattern(s) ? "true" : "false") << '\n';
     }
-
-    // Optional: read a single input from stdin
-    // string input; if (cin >> input) cout << input << " -> " << (sol.repeatedSubstringPattern(input) ? "true" : "false") << '\n';
 
     return 0;
 }
