@@ -26,3 +26,7 @@ int main() {
 
     return 0;
 }
+for creation in (jinn, humans):
+                  if guidance_rejected(creation):
+                Jahannam.add(creation)
+
